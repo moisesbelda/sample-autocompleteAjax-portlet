@@ -20,6 +20,9 @@
 <aui:form action="<%=actionURL %>" method="post" name="fm" autocomplete="off">	
 	<aui:input id="poblacionAutocomplete" name="poblacionAutocomplete" label="Población" type="text" helpMessage="Introduzca nombre de poblacion" />
 	<aui:input id="poblacionId" name="poblacionId" type="hidden"/>
+	<aui:button-row>
+		<aui:button type="submit"/>
+	</aui:button-row>
 </aui:form>
 
 <aui:script>

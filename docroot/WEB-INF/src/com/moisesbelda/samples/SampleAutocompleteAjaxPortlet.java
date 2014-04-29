@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
 import javax.portlet.PortletException;
 import javax.portlet.ResourceRequest;
 import javax.portlet.ResourceResponse;
@@ -30,6 +32,13 @@ import com.liferay.util.bridges.mvc.MVCPortlet;
  */
 public class SampleAutocompleteAjaxPortlet extends MVCPortlet {
  
+	
+	public void action(ActionRequest request, ActionResponse response) 
+			throws Exception{
+		long poblacionId = ParamUtil.getLong(request,"poblacionId");
+		System.out.println("poblacionId => " +poblacionId );
+	}
+	
 	public void serveResource(ResourceRequest request, ResourceResponse response) throws IOException, PortletException {
 			
 		String cmd = ParamUtil.getString(request, Constants.CMD);
